@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300&family=Ubuntu&display=swap");
+:root {
+	--primary: #2d2832;
+	--secondary: #4d4657;
+	--text: #e6e2cf;
+	--link: #77c7d4;
+	--placeholders: #ffe97d;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	line-height: 1.5;
+}
+
+html {
+	background-color: var(--primary);
+}
+
+body {
+	margin: 2em;
+	margin-top: 2em;
+}
+
+h1,
+h3,
+h4 {
+	color: var(--text);
+	font-family: ubuntu;
+	margin: 1em 0;
+}
+
+p {
+	color: var(--text);
+	font-family: Nunito;
+}
+
+a {
+	color: var(--link);
+}
+
+.subheadings {
+	margin-top: 3em;
+}
+
+code {
+	background-color: var(--secondary);
+	font-size: 1rem;
+}
+
+img {
+	width: 100%;
+	height: auto;
+	margin: 1vw 0;
+}
+
+.big-p {
+	font-size: 1.2rem;
+}
+
+.placeholders {
+	background-color: var(--placeholders);
+	color: var(--primary);
+}
+
+@media only screen and (min-width: 600px) {
+	img {
+		width: 75%;
+	}
+
+	p,
+	code {
+		font-size: 1.2em;
+	}
+
+	#upgrade-img {
+		width: 30%;
+	}
+
+	.big-p {
+		font-size: 1.6rem;
+	}
+}
+
+@media only screen and (min-width: 1800px) {
+	img {
+		width: 40%;
+	}
+
+	h1 {
+		font-size: 2.5em;
+		margin-bottom: 0.5em;
+	}
+
+	h3 {
+		font-size: 2em;
+		margin-bottom: 0.5em;
+	}
+
+	#upgrade-img {
+		width: 15%;
+	}
+}
