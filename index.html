@@ -50,7 +50,7 @@
 			<h3 class="subheadings">5. Calling the API</h2>
 				<p>
 					Everything should be all set at this point, the only thing left to do is to call the API. The API has 2 endpoints, one to send a message, and another to get the status of the latest sent message. <br><br>In order to send the message, a <code>POST</code> request should be sent to the following URL (Replace all placeholder values [highlighted in yellow] with the real information): <br><code>https://www.w14056.herokuapp.com/info?sid=<span class='placeholders'>&lt;ACCOUNT SID&gt;</span>&from=<span class='placeholders'>&lt;Phone Number that you bought&gt;</span>&to=<span class='placeholders'>&lt;Recipient's phone number&gt;</span>&message=<span class='placeholders'>&lt;Message to send&gt;</span></code><br>
-					This <code>POST</code> request must be sent with the following header:<code>{ method: 'POST', Authorization: '<span class='placeholders'>&lt;AUTH TOKEN&gt;</span>' }</code>
+					This <code>POST</code> request must be sent with the following header:<code>{ method: 'POST', Authorization: 'Bearer <span class='placeholders'>&lt;AUTH TOKEN&gt;</span>' }</code>
 					<br><br>To check the status of the latest sent message, send a <code>GET</code> request to <code>https://www.w14056.herokuapp.com/msg/status</code><br><br><br>
 				</p>
 		</section>
