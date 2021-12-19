@@ -5,7 +5,8 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>WhatsApp API Documentation</title>
-	</head>
+	<link rel="stylesheet" href="styles.css" />
+</head>
 	<body>
 		<h1>Get Started</h1>
 		<section>
@@ -49,15 +50,12 @@
 		<section>
 			<h3 class="subheadings">5. Calling the API</h2>
 				<p>
-					Everything should be all set at this point, the only thing left to do is to call the API. The API has 2 endpoints, one to send a message, and another to get the status of the latest sent message. <br><br>In order to send the message, a <code>POST</code> request should be sent to the following URL (Replace all placeholder values [highlighted in yellow] with the real information): <br><code>https://www.w14056.herokuapp.com/info?sid=<span class='placeholders'>&lt;ACCOUNT SID&gt;</span>&from=<span class='placeholders'>&lt;Phone Number that you bought&gt;</span>&to=<span class='placeholders'>&lt;Recipient's phone number&gt;</span>&message=<span class='placeholders'>&lt;Message to send&gt;</span></code><br>
+					Everything should be all set at this point, the only thing left to do is to call the API. The API has 2 endpoints, one to send a message, and another to get the status of the latest sent message. <br><br>In order to send the message, a <code>POST</code> request should be sent to the following URL (Replace all placeholder values [highlighted in yellow] with the real information): <br><code>https://www.w14056.herokuapp.com/info?sid=<span class='placeholders'>&lt;ACCOUNT SID&gt;</span>&from=<span class='placeholders'>&lt;Phone Number that you bought&gt;</span>&to=<span class='placeholders'>&lt;Recipient's phone number&gt;</span>&message=<span class='placeholders'>&lt;Message to send&gt;</span></code><br><br>To send images, add <code>&media=<span class="placeholders">URL OF IMAGE</span></code> to the end of the URL.<br>
 					This <code>POST</code> request must be sent with the following header:<code>{ method: 'POST', Authorization: 'Bearer <span class='placeholders'>&lt;AUTH TOKEN&gt;</span>' }</code>
-					<br><br>To check the status of the latest sent message, send a <code>GET</code> request to <code>https://www.w14056.herokuapp.com/msg/status</code><br><br><br>
+					<br><br>To check the status of the latest sent message, send a <code>GET</code> request to <code>https://www.w14056.herokuapp.com/msg/status/info?sid=<span class='placeholders'>&lt;ACCOUNT SID&gt;</span></code> with the following header: <code>headers: {Authorization: 'Bearer <span class="placeholders">&lt;AUTH TOKEN&gt;</span>'}</code><br><br><br>
 				</p>
 		</section>
 
 		<p class="big-p">At this point, everything should be working!</p>
-		
-		
 	</body>
-	<link rel="stylesheet" href="styles.css" />
 </html>
